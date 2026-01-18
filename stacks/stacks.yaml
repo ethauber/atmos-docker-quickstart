@@ -1,0 +1,6 @@
+# Example stacks configuration
+# Add your stack definitions here
+
+# Reference the existing stack file
+import:
+  - local-test-dev.yaml

@@ -1,0 +1,14 @@
+# Context variables used for naming conventions
+vars:
+  tenant: local
+  environment: test
+  stage: dev
+
+components:
+  terraform:
+    # This matches the folder name in components/terraform/
+    hello-world:
+      # These variables override the defaults in main.tf
+      vars:
+        container_name: "atmos-quickstart-nginx"
+        external_port: 8081
