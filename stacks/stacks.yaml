@@ -4,3 +4,4 @@
 # Reference the existing stack file
 import:
   - local-test-dev.yaml
+  - local-prod-live.yaml

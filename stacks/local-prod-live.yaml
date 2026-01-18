@@ -1,0 +1,14 @@
+# A completely different environment (Prod)
+vars:
+  tenant: local
+  environment: prod
+  stage: live
+
+components:
+  terraform:
+    hello-world:
+      vars:
+        # Different container name
+        container_name: "atmos-prod-nginx"
+        # Different port so it doesn't clash with Dev
+        external_port: 9090
