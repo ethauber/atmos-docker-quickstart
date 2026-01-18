@@ -11,6 +11,21 @@ provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
 
+variable "tenant" {
+  type        = string
+  description = "The tenant name (e.g. 'local')"
+}
+
+variable "environment" {
+  type        = string
+  description = "The environment name (e.g. 'test')"
+}
+
+variable "stage" {
+  type        = string
+  description = "The stage name (e.g. 'dev')"
+}
+
 variable "container_name" {
   type    = string
   default = "atmos-demo-nginx"
@@ -21,13 +36,11 @@ variable "external_port" {
   default = 8080
 }
 
-# Pull the NGINX image
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
 }
 
-# Run the container
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
   name  = var.container_name
