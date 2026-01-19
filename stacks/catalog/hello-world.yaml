@@ -1,0 +1,9 @@
+# Base component catalog for hello-world
+# This defines default configuration that all stacks inherit from
+components:
+  terraform:
+    hello-world:
+      vars:
+        # Default values - can be overridden in stack files
+        container_name: "atmos-nginx"
+        external_port: 8080

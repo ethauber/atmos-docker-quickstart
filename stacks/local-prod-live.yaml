@@ -1,4 +1,5 @@
-# A completely different environment (Prod)
+# Production Live Stack
+# Inherits from catalog/hello-world.yaml and overrides specific values
 vars:
   tenant: local
   environment: prod
@@ -8,7 +9,7 @@ components:
   terraform:
     hello-world:
       vars:
-        # Different container name
+        # Override defaults from catalog for prod environment
         container_name: "atmos-prod-nginx"
         # Different port so it doesn't clash with Dev
         external_port: 9090

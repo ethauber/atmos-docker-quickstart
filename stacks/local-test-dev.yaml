@@ -1,4 +1,5 @@
-# Context variables used for naming conventions
+# Test Development Stack
+# Inherits from catalog/hello-world.yaml and overrides specific values
 vars:
   tenant: local
   environment: test
@@ -6,9 +7,8 @@ vars:
 
 components:
   terraform:
-    # This matches the folder name in components/terraform/
     hello-world:
-      # These variables override the defaults in main.tf
       vars:
-        container_name: "atmos-quickstart-nginx"
+        # Override defaults from catalog for dev environment
+        container_name: "atmos-test-nginx"
         external_port: 8081
