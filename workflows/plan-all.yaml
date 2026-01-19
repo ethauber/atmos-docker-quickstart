@@ -1,0 +1,6 @@
+workflows:
+  plan-all:
+    description: "Plan hello-world component across all environments"
+    steps:
+      - command: terraform plan hello-world -s local-test-dev
+      - command: terraform plan hello-world -s local-prod-live

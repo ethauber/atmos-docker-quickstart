@@ -1,0 +1,5 @@
+workflows:
+  deploy-dev:
+    description: "Deploy hello-world to dev environment"
+    steps:
+      - command: terraform apply hello-world -s local-test-dev --auto-approve

@@ -1,0 +1,6 @@
+workflows:
+  status:
+    description: "Show the current state of all environments"
+    steps:
+      - command: terraform output hello-world -s local-test-dev
+      - command: terraform output hello-world -s local-prod-live

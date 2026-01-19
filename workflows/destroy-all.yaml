@@ -1,0 +1,6 @@
+workflows:
+  destroy-all:
+    description: "Destroy hello-world in all environments (prod -> dev)"
+    steps:
+      - command: terraform destroy hello-world -s local-prod-live --auto-approve
+      - command: terraform destroy hello-world -s local-test-dev --auto-approve

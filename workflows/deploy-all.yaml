@@ -1,0 +1,6 @@
+workflows:
+  deploy-all:
+    description: "Deploy hello-world to all environments (dev -> prod)"
+    steps:
+      - command: terraform apply hello-world -s local-test-dev --auto-approve
+      - command: terraform apply hello-world -s local-prod-live --auto-approve

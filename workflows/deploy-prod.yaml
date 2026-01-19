@@ -1,0 +1,5 @@
+workflows:
+  deploy-prod:
+    description: "Deploy hello-world to prod environment"
+    steps:
+      - command: terraform apply hello-world -s local-prod-live --auto-approve

@@ -14,4 +14,11 @@ stacks:
   # Defines how we reference stacks (e.g., atmos terraform apply <component> -s <tenant>-<env>-<stage>)
   name_pattern: "{tenant}-{environment}-{stage}"
   included_paths:
-    - "stacks/"
+    - "local-*.yaml"
+  excluded_paths:
+    - "catalog/**/*"
+    - "stacks.yaml"
+
+# Workflows - reusable command sequences for common operations
+workflows:
+  base_path: "workflows"
