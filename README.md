@@ -16,3 +16,9 @@ To apply the Terraform configuration using Atmos with the local-prod-live stack,
 ```
 atmos terraform apply hello-world -s local-prod-live
 ```
+
+To destroy the Terraform configurations for all stacks at once, use the following command:
+
+```
+atmos terraform destroy --all
+```
